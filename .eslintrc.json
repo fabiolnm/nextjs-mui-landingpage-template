@@ -1,0 +1,70 @@
+{
+  "extends": [
+    // https://github.com/airbnb/javascript
+    "airbnb",
+    // https://eslint.org/docs/latest/rules
+    "eslint:recommended",
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
+    "plugin:@typescript-eslint/recommended",
+    // https://web.dev/articles/vitals
+    "next/core-web-vitals",
+    // https://nextjs.org/docs/app/building-your-application/configuring/eslint#typescript
+    "next/typescript"
+  ],
+  // https://eslint.style/guide/migration#approach-1-migrate-to-single-plugin
+  "plugins": [
+    "@stylistic", "import"
+  ],
+  "rules": {
+    "camelcase": "off",
+    "semi": "off",
+    "@stylistic/semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "import/exports-last": "error",
+    "import/prefer-default-export": "off",
+    // this is for sorting WITHIN an import
+    "sort-imports": ["error", {
+      "ignoreCase": true, "ignoreDeclarationSort": true
+    }],
+    // https://manurana.medium.com/organizing-imports-in-react-and-react-native-faf982a3a3b5
+    // this is for sorting imports
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["external", "builtin"], "internal",
+          ["sibling", "parent"], "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@(react|react-native)",
+            "group": "external",
+            "position": "before"
+          },
+          { "pattern": "@/app/**", "group": "internal" }
+        ],
+        "pathGroupsExcludedImportTypes": ["internal", "react"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "linebreak-style": ["error", "unix"],
+    "max-len": ["error", {
+      "code": 80, "tabWidth": 2, "ignoreUrls": true
+    }],
+    "no-console": ["error", {
+      "allow": ["info", "error"]
+    }],
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    // https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
+    "import/extensions": ["error", "ignorePackages", {
+      "js": "never",
+      "jsx": "never",
+      "ts": "never",
+      "tsx": "never"
+    }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-object-type": "off"
+  }
+}

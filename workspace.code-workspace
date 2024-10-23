@@ -1,0 +1,32 @@
+{
+	"folders": [
+    {
+      "name": "Next.js App",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "envFile": "${workspaceFolder}/.env",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+      "**/.next": true,
+    },
+    "gitblame.commitUrl": "${tool.protocol}//github.com${gitorigin.port}${gitorigin.path}${tool.commitpath}${hash}",
+    "testing.openTesting": "neverOpen"
+  },
+  "launch": {
+    // https://tymick.me/blog/debug-nextjs-with-vs-code
+    "configurations": [
+      {
+        "name": "Debug Next.js",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "npm run dev",
+      }
+    ]
+  }
+}
