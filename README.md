@@ -1,12 +1,8 @@
 ## Next.js MUI Boilerplate
-This utility helps to quicly set up a new Next.js project with some conveniences
+This utility helps to quicly set up a new Next.js Landing Page based on
 
-- VSCode workspace settings to launch and debug a Next.js application
-- Convenient eslint setup
-- Material UI dependencies and setup
-  - [Viewport](https://mui.com/material-ui/getting-started/usage/#responsive-meta-tag)
-  - [CssBaseline](https://mui.com/material-ui/getting-started/usage/#cssbaseline)
-  - [AppRouterCacheProvider and Theme](https://mui.com/material-ui/integrations/nextjs/)
+- https://mui.com/material-ui/getting-started/templates/marketing-page/
+- https://github.com/mui/material-ui/tree/v6.1.5/docs/data/material/getting-started/templates/marketing-page
 
 ## Create a new project
 ```
@@ -15,5 +11,5 @@ npx create-next-app@14  \
     --eslint            \
     --app               \
     --use-npm           \
-    --example https://github.com/fabiolnm/nextjs14-mui-boilerplate
+    --example https://github.com/fabiolnm/nextjs14-mui-landingpage-template
 ```

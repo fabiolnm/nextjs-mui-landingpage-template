@@ -1,8 +1,8 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
 import type { Metadata } from 'next'
 
-import { roboto } from '@/theme/app-font'
-import { AppTheme } from '@/theme/app-theme'
+import AppTheme from '@/theme/AppTheme'
+import { inter } from '@/theme/themePrimitives'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
-      <body suppressHydrationWarning className={roboto.variable}>
+      <body suppressHydrationWarning className={inter.variable}>
         <AppRouterCacheProvider>
           <AppTheme>
             {children}
